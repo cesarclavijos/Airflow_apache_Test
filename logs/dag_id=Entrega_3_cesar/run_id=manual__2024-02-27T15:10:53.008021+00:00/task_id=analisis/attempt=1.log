@@ -1,0 +1,74 @@
+[2024-02-27 15:10:56,866] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Entrega_3_cesar.analisis manual__2024-02-27T15:10:53.008021+00:00 [queued]>
+[2024-02-27 15:10:56,875] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Entrega_3_cesar.analisis manual__2024-02-27T15:10:53.008021+00:00 [queued]>
+[2024-02-27 15:10:56,876] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-27 15:10:56,877] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2024-02-27 15:10:56,878] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-27 15:10:56,888] {taskinstance.py:1397} INFO - Executing <Task(_PythonDecoratedOperator): analisis> on 2024-02-27 15:10:53.008021+00:00
+[2024-02-27 15:10:56,894] {standard_task_runner.py:52} INFO - Started process 231 to run task
+[2024-02-27 15:10:56,898] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Entrega_3_cesar', 'analisis', 'manual__2024-02-27T15:10:53.008021+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/dag_entrega_3.py', '--cfg-path', '/tmp/tmpojitua4p', '--error-file', '/tmp/tmpyg3g_y72']
+[2024-02-27 15:10:56,901] {standard_task_runner.py:80} INFO - Job 75: Subtask analisis
+[2024-02-27 15:10:56,973] {task_command.py:371} INFO - Running <TaskInstance: Entrega_3_cesar.analisis manual__2024-02-27T15:10:53.008021+00:00 [running]> on host dbb218fa830a
+[2024-02-27 15:10:57,049] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Cesar
+AIRFLOW_CTX_DAG_ID=Entrega_3_cesar
+AIRFLOW_CTX_TASK_ID=analisis
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-27T15:10:53.008021+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-27T15:10:53.008021+00:00
+[2024-02-27 15:10:57,052] {logging_mixin.py:115} INFO - Analizando data...
+[2024-02-27 15:10:57,059] {logging_mixin.py:115} INFO - columna 'date' tiene 0 valores nulos
+[2024-02-27 15:10:57,060] {logging_mixin.py:115} INFO - columna 'base' tiene 0 valores nulos
+[2024-02-27 15:10:57,062] {logging_mixin.py:115} INFO - columna 'To' tiene 0 valores nulos
+[2024-02-27 15:10:57,063] {logging_mixin.py:115} INFO - columna 'rates' tiene 0 valores nulos
+[2024-02-27 15:10:57,063] {logging_mixin.py:115} INFO - columna 'Year' tiene 0 valores nulos
+[2024-02-27 15:10:57,064] {logging_mixin.py:115} INFO - columna 'Month' tiene 0 valores nulos
+[2024-02-27 15:10:57,065] {logging_mixin.py:115} INFO - columna 'Day' tiene 0 valores nulos
+[2024-02-27 15:10:57,077] {logging_mixin.py:115} INFO -              rates    Year  Month   Day
+count     9.000000     9.0    9.0   9.0
+mean    458.886386  2024.0    2.0  27.0
+std    1304.164058     0.0    0.0   0.0
+min       1.351853  2024.0    2.0  27.0
+25%       2.024348  2024.0    2.0  27.0
+50%       3.672500  2024.0    2.0  27.0
+75%      73.149165  2024.0    2.0  27.0
+max    3935.377500  2024.0    2.0  27.0
+[2024-02-27 15:10:57,078] {logging_mixin.py:115} INFO - (9, 7)
+[2024-02-27 15:10:57,080] {logging_mixin.py:115} INFO - date      object
+base      object
+To        object
+rates    float64
+Year       int64
+Month      int64
+Day        int64
+dtype: object
+[2024-02-27 15:10:57,086] {logging_mixin.py:115} INFO - <class 'pandas.core.frame.DataFrame'>
+Index: 9 entries, 0 to 8
+Data columns (total 7 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   date    9 non-null      object 
+ 1   base    9 non-null      object 
+ 2   To      9 non-null      object 
+ 3   rates   9 non-null      float64
+ 4   Year    9 non-null      int64  
+ 5   Month   9 non-null      int64  
+ 6   Day     9 non-null      int64  
+dtypes: float64(1), int64(3), object(3)
+memory usage: 576.0+ bytes
+[2024-02-27 15:10:57,087] {logging_mixin.py:115} INFO - None
+[2024-02-27 15:10:57,092] {logging_mixin.py:115} INFO -                    date base   To        rates  Year  Month  Day
+0  2024-02-27T15:10:55Z  USD  COP  3935.377500  2024      2   27
+1  2024-02-27T15:10:55Z  USD  ADA     1.605124  2024      2   27
+2  2024-02-27T15:10:55Z  USD  AED     3.672500  2024      2   27
+3  2024-02-27T15:10:55Z  USD  AFN    73.149165  2024      2   27
+4  2024-02-27T15:10:55Z  USD  ALL    95.775173  2024      2   27
+5  2024-02-27T15:10:55Z  USD  CAD     1.351853  2024      2   27
+6  2024-02-27T15:10:55Z  USD  BZD     2.024348  2024      2   27
+7  2024-02-27T15:10:55Z  USD  BYN     3.269981  2024      2   27
+8  2024-02-27T15:10:55Z  USD  BWP    13.751827  2024      2   27
+[2024-02-27 15:10:57,094] {python.py:173} INFO - Done. Returned value was: None
+[2024-02-27 15:10:57,106] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Entrega_3_cesar, task_id=analisis, execution_date=20240227T151053, start_date=20240227T151056, end_date=20240227T151057
+[2024-02-27 15:10:57,152] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-02-27 15:10:57,184] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
